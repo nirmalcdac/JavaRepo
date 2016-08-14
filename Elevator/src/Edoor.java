@@ -1,4 +1,4 @@
 
-public class Edoor extends Door{
+public class Edoor extends Door {
 
 }

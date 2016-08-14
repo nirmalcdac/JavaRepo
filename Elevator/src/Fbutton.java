@@ -1,4 +1,4 @@
 
-public class Fbutton extends Button{
+public class Fbutton extends Button {
 
 }

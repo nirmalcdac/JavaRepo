@@ -1,5 +1,5 @@
 package Interface;
-public interface Animal 
-{
+
+public interface Animal {
 	public void eat();
 }

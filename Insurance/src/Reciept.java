@@ -9,26 +9,22 @@
 //
 //
 
-
-
-
 /** */
-public class Reciept
-{
+public class Reciept {
 	/** */
 	private Insurance insurance;
-	 private Registration registration;
+	private Registration registration;
 
-		public void generateRegistrationReceipt(Registration registration) {
-			// TODO Auto-generated method stub
-			this.registration = registration;
-			registration.diplayDetails();
-		}
+	public void generateRegistrationReceipt(Registration registration) {
+		// TODO Auto-generated method stub
+		this.registration = registration;
+		registration.diplayDetails();
+	}
 
 	public void generateInsuranceReciept(Insurance insurance) {
 		// TODO Auto-generated method stub
 		this.insurance = insurance;
 		insurance.diplayDetails();
 	}
-	
+
 }

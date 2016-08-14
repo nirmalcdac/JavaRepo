@@ -1,20 +1,19 @@
-public class PracticeStatic 
-{
-	static int a=3;
+public class PracticeStatic {
+	static int a = 3;
 	static int b;
-	static void meth(int x)
-	{
+
+	static void meth(int x) {
 		System.out.println("x= " + x);
 		System.out.println("a= " + a);
 		System.out.println("b= " + b);
 	}
-	static
-	{
+
+	static {
 		System.out.println("static block initialised ");
-		b=a*4;
+		b = a * 4;
 	}
-	public static void main(String[] args) 
-	{
+
+	public static void main(String[] args) {
 		meth(42);
 	}
 }

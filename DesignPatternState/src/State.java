@@ -1,5 +1,4 @@
 
-public interface State 
-{
+public interface State {
 	void applybreak(ApplyBreak wrapper);
 }

@@ -1,7 +1,7 @@
 public class Test {
 
 	public static void main(String[] args) {
-		
+
 		// TODO Auto-generated method stub
 		// TreeNode n6 = new TreeNode(6);
 		// TreeNode n7 = new TreeNode(7);

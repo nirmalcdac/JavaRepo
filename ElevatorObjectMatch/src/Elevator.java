@@ -1,16 +1,12 @@
-class Elevator implements Cloneable 
-{
+class Elevator implements Cloneable {
 	Door door;
 	Control control;
-	public Object clone() 
-	{
+
+	public Object clone() {
 		Object obj = null;
-		try 
-		{ 
+		try {
 			obj = super.clone();
-		} 
-		catch (CloneNotSupportedException e) 
-		{ 
+		} catch (CloneNotSupportedException e) {
 			System.out.println(e);
 		}
 		return obj;

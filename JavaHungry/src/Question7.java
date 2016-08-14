@@ -1,23 +1,16 @@
-public class Question7 
-{
-	public static void main (String [] str)
-	{
+public class Question7 {
+	public static void main(String[] str) {
 		javaHungryMethod();
 	}
-	private static int javaHungryMethod()
-	{
-		try
-		{
+
+	private static int javaHungryMethod() {
+		try {
 			System.out.println("try");
-			int x=4/0;
+			int x = 4 / 0;
 			return 10;
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			System.out.println("catch");
-		}
-		finally
-		{
+		} finally {
 			System.out.println("finally");
 			return 88;
 		}

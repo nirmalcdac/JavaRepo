@@ -1,23 +1,18 @@
-class MyClass implements Cloneable 
-{
-	public Object clone() 
-	{
+class MyClass implements Cloneable {
+	public Object clone() {
 		Object obj = null;
-		try 
-		{ 
+		try {
 			obj = super.clone();
 		} // Calls overridden method.
-		catch (CloneNotSupportedException e) 
-		{ 
+		catch (CloneNotSupportedException e) {
 			System.out.println(e);
 		}
 		return obj;
 	}
 }
-class ObjectMethods 
-{
-	public static void main(String[] args)
-	{
+
+class ObjectMethods {
+	public static void main(String[] args) {
 		// Two objects of MyClass.
 		MyClass obj1 = new MyClass();
 		MyClass obj2 = new MyClass();
@@ -30,7 +25,7 @@ class ObjectMethods
 		System.out.println("hash code for str2: " + str2.hashCode() + "\n");
 		// Hash codes are different for different MyClass objects.
 		System.out.println("hash code for MyClass obj1: " + obj1.hashCode());
-		System.out.println("hash code for MyClass obj2: " + obj2.hashCode()+"\n");
+		System.out.println("hash code for MyClass obj2: " + obj2.hashCode() + "\n");
 		// Method equals() overridden in the String class.
 		System.out.println("str1.equals(str2): " + str1.equals(str2));
 		System.out.println("str1 == str2: " + (str1 == str2) + "\n");
@@ -48,13 +43,12 @@ class ObjectMethods
 		System.out.println("Text representation of str1: " + textRepStr);
 		System.out.println("Text representation of obj1: " + textRepObj + "\n");
 		// Shallow copying of arrays.
-		MyClass[] array1 = {new MyClass(), new MyClass(), new MyClass()};
+		MyClass[] array1 = { new MyClass(), new MyClass(), new MyClass() };
 		MyClass[] array2 = array1.clone();
 		// Array objects are different, but share the element objects.
 		System.out.println("array1 == array2: " + (array1 == array2));
-		for(int i = 0; i < array1.length; i++)
-		{
-			System.out.println("array1[" + i + "] == array2[" + i + "] : " +(array1[i] == array2[i]));
+		for (int i = 0; i < array1.length; i++) {
+			System.out.println("array1[" + i + "] == array2[" + i + "] : " + (array1[i] == array2[i]));
 		}
 		System.out.println();
 		// Clone an object of MyClass.

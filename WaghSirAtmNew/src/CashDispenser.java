@@ -9,7 +9,7 @@ public class CashDispenser {
 
 	public void dispenseCash(int amount) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

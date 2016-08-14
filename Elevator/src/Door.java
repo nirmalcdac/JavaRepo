@@ -1,5 +1,4 @@
 
-public class Door
-{
+public class Door {
 	boolean status;
 }

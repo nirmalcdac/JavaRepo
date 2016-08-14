@@ -1,7 +1,5 @@
-public class ScoreBoard 
-{
-	public Object update()
-	{
+public class ScoreBoard {
+	public Object update() {
 		return 1;
 	}
 }

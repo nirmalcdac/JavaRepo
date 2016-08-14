@@ -1,8 +1,6 @@
 
-public class Radio 
-{
-	public void detail() 
-	{
+public class Radio {
+	public void detail() {
 		System.out.println("Radio started");
 	}
 

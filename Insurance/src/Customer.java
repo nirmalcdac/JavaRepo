@@ -13,43 +13,32 @@ import java.util.List;
 //
 import java.util.Date;
 
-
-
 /** */
-public class Customer
-{
+public class Customer {
 	/** */
 	private String name;
-	
+
 	/** */
-//	private String id;
-	
+	// private String id;
+
 	private String address;
-	
+
 	private Date DOB;
-	
+
 	private int contactNumber;
-	
-	/** */
-//	public Vehicle vehicle;
-	private	List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 
-	private  SalesRepresentative salesRep;
-	
-	
 	/** */
-	
-	
-	
-	
+	// public Vehicle vehicle;
+	private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+
+	private SalesRepresentative salesRep;
+
+	/** */
+
 	/**
-	 * @param salesRep  */
+	 * @param salesRep
+	 */
 
-	
-
-	
-
-	
 	public Customer(String name, String address, Date DOB, int contactNumber, SalesRepresentative salesRep) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
@@ -57,55 +46,50 @@ public class Customer
 		this.DOB = DOB;
 		this.contactNumber = contactNumber;
 		this.salesRep = salesRep;
-		
-		
-	}
 
+	}
 
 	public Policy getPolicydetails() {
 		// TODO Auto-generated method stub
 		Policytype policytype = new Premiumpolicy();
 		Policy policy = new Policy(policytype);
 		return policy;
-		
-	}
 
+	}
 
 	public Payment getPaymentdetails(Insurance insurance) {
 		// TODO Auto-generated method stub
-		Payment payment = new Payment("DD",new Date(16-4-2013),this.salesRep,this,insurance);
+		Payment payment = new Payment("DD", new Date(16 - 4 - 2013), this.salesRep, this, insurance);
 		return payment;
 	}
 
 	public Payment getPaymentdetails(Registration registration) {
 		// TODO Auto-generated method stub
-		Payment payment = new Payment("DD",new Date(16-4-2013),this.salesRep,this,registration);
+		Payment payment = new Payment("DD", new Date(16 - 4 - 2013), this.salesRep, this, registration);
 		return payment;
 	}
+
 	public void setVehicledetails(Vehicle vehicle) {
 		// TODO Auto-generated method stub
 		this.vehicleList.add(vehicle);
 	}
 
-
 	public Vehicle getVehicledetails() {
 		// TODO Auto-generated method stub
 		return this.vehicleList.get(0);
-		
-	}
 
+	}
 
 	public String getName() {
 		// TODO Auto-generated method stub
 		return this.name;
 	}
 
-
 	public int getContactinfo() {
 		// TODO Auto-generated method stub
 		return this.contactNumber;
 	}
-	
+
 	/** */
-	
+
 }

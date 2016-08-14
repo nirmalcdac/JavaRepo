@@ -4,8 +4,8 @@ public class CardReader {
 
 	public void insertCard(ATMCard card) {
 		// TODO Auto-generated method stub
-		atmCard=card;
-		
+		atmCard = card;
+
 	}
 
 	public int getPIN() {

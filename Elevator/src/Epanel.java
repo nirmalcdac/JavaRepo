@@ -1,5 +1,4 @@
 
-public class Epanel extends Panel
-{
+public class Epanel extends Panel {
 	Panel p = new Panel();
 }

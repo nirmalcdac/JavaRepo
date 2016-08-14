@@ -1,21 +1,20 @@
-public enum Meal
-{
-	BREAKFAST(7,30), LUNCH(12,15), DINNER(19,45); // (1)
-	Meal(int hh, int mm)
-	{
-		assert (hh >= 0 && hh <= 23): "Illegal hour.";
-		assert (mm >= 0 && mm <= 59): "Illegal mins.";
+public enum Meal {
+	BREAKFAST(7, 30), LUNCH(12, 15), DINNER(19, 45); // (1)
+	Meal(int hh, int mm) {
+		assert (hh >= 0 && hh <= 23) : "Illegal hour.";
+		assert (mm >= 0 && mm <= 59) : "Illegal mins.";
 		this.hh = hh;
 		this.mm = mm;
 	}
+
 	private int hh;
 	private int mm;
-	public int getHour()
-	{
+
+	public int getHour() {
 		return this.hh;
 	}
-	public int getMins()
-	{
+
+	public int getMins() {
 		return this.mm;
 	}
 }

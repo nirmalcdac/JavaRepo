@@ -1,49 +1,43 @@
-public class Elevator
-{
+public class Elevator {
 	Building bl = new Building();
-	
+
 	int currentstatus;
 	int destination;
-	boolean Estatus;// 1=moving, 0 stationary 
-	public Elevator()
-	{
-		currentstatus=0;
+	boolean Estatus;// 1=moving, 0 stationary
+
+	public Elevator() {
+		currentstatus = 0;
 	}
-	public int getelstatus()
-	{
+
+	public int getelstatus() {
 		return currentstatus;
 	}
-	public void callelevator()
-	{
+
+	public void callelevator() {
 		System.out.println("Evevator come");
 	}
-	public void Setchoice(int k)
-	{
-		this.destination=k;
+
+	public void Setchoice(int k) {
+		this.destination = k;
 	}
-	public void opendoor()
-	{
+
+	public void opendoor() {
 		System.out.println("Edoor opened");
 	}
-	public void doorclose()
-	{
+
+	public void doorclose() {
 		System.out.println("Edoor closed");
 	}
-	public void moveelevator()
-	{
-		if(currentstatus < destination)
-		{
-			for(int i=currentstatus;i<=destination;i++)
-			{
-				System.out.println("Elevator is moving towards floor no." + destination  + " current floor is " + i);
+
+	public void moveelevator() {
+		if (currentstatus < destination) {
+			for (int i = currentstatus; i <= destination; i++) {
+				System.out.println("Elevator is moving towards floor no." + destination + " current floor is " + i);
 			}
-		}
-		else
-		{
-			for(int i=currentstatus;i>=destination;--i)
-			{
+		} else {
+			for (int i = currentstatus; i >= destination; --i) {
 				System.out.println("Elevator is moving towards floor no." + destination + " current floor is " + i);
 			}
 		}
-	}	
+	}
 }

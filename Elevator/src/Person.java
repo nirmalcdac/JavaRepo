@@ -1,11 +1,9 @@
 
-public class Person
-{
-	public static void main(String args []) throws Exception
-	{
+public class Person {
+	public static void main(String args[]) throws Exception {
 		Person p = new Person();
-		Elevator el=new Elevator();
-		int status=el.getelstatus();
+		Elevator el = new Elevator();
+		int status = el.getelstatus();
 		System.out.println("Elevator is on floar no " + status);
 		el.callelevator();
 		el.opendoor();
@@ -16,8 +14,8 @@ public class Person
 		el.opendoor();
 		el.doorclose();
 	}
-	private void enter()
-	{
+
+	private void enter() {
 		System.out.println("Person Entered");
 	}
 }

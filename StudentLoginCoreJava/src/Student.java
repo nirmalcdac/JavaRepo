@@ -1,12 +1,10 @@
 import java.util.Scanner;
 
-public class Student
-{
-	public static void main(String args []) throws Exception
-	{
+public class Student {
+	public static void main(String args[]) throws Exception {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
-		Moodle m=new Moodle();
+		Moodle m = new Moodle();
 		m.login();
 		m.show_courses();
 		System.out.println("choose course");
@@ -16,9 +14,8 @@ public class Student
 		logout();
 	}
 
-	private static void logout()
-	{
+	private static void logout() {
 		System.out.println("Successfully logged out");
 	}
-	
+
 }

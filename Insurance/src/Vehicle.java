@@ -9,62 +9,54 @@
 //
 //
 
-
-
-
 /** */
-public class Vehicle
-{
+public class Vehicle {
 	/** */
 	private Registration registration;
-	
+
 	/** */
 	private int capacity;
-	 
+
 	private String chasisNumber;
-	
+
 	private String color;
-	
+
 	private String vehicleType;
-	
+
 	private String vehicleName;
 	/** */
 	private String fuelType;
-	
+
 	private Insurance insurance;
-	
-	
+
 	/** */
-	
-	
-	public Vehicle(int capacity, String chasisNumber, String color, String vehicleType,
-			String fuelType,String vehicleName) {
+
+	public Vehicle(int capacity, String chasisNumber, String color, String vehicleType, String fuelType,
+			String vehicleName) {
 		// TODO Auto-generated constructor stub
 		this.capacity = capacity;
 		this.chasisNumber = chasisNumber;
 		this.color = color;
 		this.vehicleType = vehicleType;
 		this.fuelType = fuelType;
-		this.vehicleName=vehicleName;
-		
-		}
+		this.vehicleName = vehicleName;
+
+	}
 
 	/** */
-	public Registration getRegdetails()
-	{
+	public Registration getRegdetails() {
 		return this.registration;
 	}
-	
+
 	/** */
-	public void getOwner()
-	{
-	
+	public void getOwner() {
+
 	}
 
 	public void setInsurancedetails(Insurance insurance) {
 		// TODO Auto-generated method stub
 		this.insurance = insurance;
-		
+
 	}
 
 	public Insurance getInsurancedetails() {

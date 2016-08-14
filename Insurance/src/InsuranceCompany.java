@@ -9,22 +9,17 @@
 //
 //
 
-
-
-
 /** */
-public class InsuranceCompany
-{
+public class InsuranceCompany {
 
-	//private Reciept reciept;
+	// private Reciept reciept;
 	public boolean createInsurance(Insurance insurance) {
 		// TODO Auto-generated method stub
 		System.out.println("insurance Created");
 		Reciept reciept = new Reciept();
 		reciept.generateInsuranceReciept(insurance);
 		return true;
-	
 
 	}
-	
+
 }

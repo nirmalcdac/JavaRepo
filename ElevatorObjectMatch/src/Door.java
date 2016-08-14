@@ -1,16 +1,12 @@
 
-public class Door implements Cloneable  
-{
-   int doorid=1;
-	public Object clone() 
-	{
+public class Door implements Cloneable {
+	int doorid = 1;
+
+	public Object clone() {
 		Object obj = null;
-		try 
-		{ 
+		try {
 			obj = super.clone();
-		} 
-		catch (CloneNotSupportedException e) 
-		{ 
+		} catch (CloneNotSupportedException e) {
 			System.out.println(e);
 		}
 		return obj;

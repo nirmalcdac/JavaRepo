@@ -1,7 +1,5 @@
-public class TaxiBooking
-{
-	public void booking()
-	{
-		System.out.println("taxi booked");	
+public class TaxiBooking {
+	public void booking() {
+		System.out.println("taxi booked");
 	}
 }

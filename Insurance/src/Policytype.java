@@ -8,5 +8,4 @@ public interface Policytype {
 
 	public String getPolicydescription();
 
-
 }

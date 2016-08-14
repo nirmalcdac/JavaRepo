@@ -12,46 +12,40 @@ import java.util.List;
 //
 //
 
-
-
-
 /** */
-public class Dealer
-{
+public class Dealer {
 	/** */
 	private String name;
-	
-	private	List<Customer> customerList = new ArrayList<Customer>();
-	
+
+	private List<Customer> customerList = new ArrayList<Customer>();
+
 	/** */
-	private	List<Employee> employeeList = new ArrayList<Employee>();
-	
+	private List<Employee> employeeList = new ArrayList<Employee>();
+
 	/** */
-	private	List<Vehicle> vehicleList = new ArrayList<Vehicle>();
-	
+	private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+
 	/** */
-	
+
 	public Dealer(String name) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
 	}
 
 	/** */
-	public void getEmployeeDetails()
-	{
-	
+	public void getEmployeeDetails() {
+
 	}
-	
+
 	/** */
-	public void getVehicleDetails()
-	{
-	
+	public void getVehicleDetails() {
+
 	}
 
 	public void addEmployee(Employee employee) {
 		// TODO Auto-generated method stub
 		this.employeeList.add(employee);
-		
+
 	}
 
 	public void addVehicle(Vehicle vehicle) {

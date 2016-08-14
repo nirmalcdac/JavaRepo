@@ -1,12 +1,11 @@
-public class Book
-{
+public class Book {
 	private String title;
-	public String get_Title() 
-	{
+
+	public String get_Title() {
 		return title;
 	}
-	public void setauthor(String title) 
-	{
-		this.title= title;
+
+	public void setauthor(String title) {
+		this.title = title;
 	}
 }
