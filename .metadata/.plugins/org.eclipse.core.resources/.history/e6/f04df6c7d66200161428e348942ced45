@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class GetMeCab {
+	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
+		String numberOfElementsString = input.nextLine();
+		int numberOfElements = Integer.parseInt(numberOfElementsString);
+		String[] stringInput = new String[numberOfElements];
+
+		for (int i = 0; i < numberOfElements; i++) {
+			System.out.print("Input Element" + (i + 1) + ": ");
+			stringInput[i] = input.nextLine();
+		}
+
+		input.close();
+
+		int totalBonus = Integer.parseInt(stringInput[0]);
+
+		for (int i = 1; i < numberOfElements; i++) {
+			String str = stringInput[i];
+			TreeNode node = new TreeNode(str);
+
+			MyBineryTree mbt = new MyBineryTree(node);
+			mbt.traverseTree(mbt.root, totalBonus);
+		}
+	}
+}
