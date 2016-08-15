@@ -1,0 +1,60 @@
+public class RoseIndia {
+	public static void main(String[] args) {
+		new RoseIndia().run();
+	}
+
+	static class Node {
+		Node left;
+		Node right;
+		int score;
+		String employeeID;
+		String employeeName;
+		String managerID;
+
+		public Node(String employeeID, String employeeName, String managerID, int score) {
+			this.score = score;
+			this.employeeID = employeeID;
+			this.employeeName = employeeName;
+			this.managerID = managerID;
+		}
+	}
+
+	public void run() {
+		Node rootnode = new Node("1", "A", "-1", 100);
+		System.out.println("Building tree with rootvalue " + rootnode.score);
+		System.out.println("=================================");
+		// insert(rootnode, "1", "A", "-1", 100);
+		insert(rootnode, "2", "B", "1", 3);
+		insert(rootnode, "3", "C", "1", 2);
+		insert(rootnode, "4", "D", "2", 3);
+		System.out.println("Traversing tree in order");
+		System.out.println("=================================");
+		printInOrder(rootnode);
+	}
+
+	public void insert(Node node, String employeeID, String employeeName, String managerID, int score) {
+		if (score < node.score) {
+			if (node.left != null) {
+				insert(node.left, employeeID, employeeName, managerID, score);
+			} else {
+				System.out.println("  Inserted " + score + " to left of node " + node.score);
+				node.left = new Node(employeeID, employeeName, managerID, score);
+			}
+		} else if (score > node.score) {
+			if (node.right != null) {
+				insert(node.right, employeeID, employeeName, managerID, score);
+			} else {
+				System.out.println("  Inserted " + score + "   to right of node " + node.score);
+				node.right = new Node(employeeID, employeeName, managerID, score);
+			}
+		}
+	}
+
+	public void printInOrder(Node node) {
+		if (node != null) {
+			printInOrder(node.left);
+			System.out.println("  Traversed " + node.score);
+			printInOrder(node.right);
+		}
+	}
+}

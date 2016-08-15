@@ -1,55 +1,60 @@
-public class RoseIndia {
-	public static void main(String[] args) {
-		new RoseIndia().run();
-	}
+import java.util.Scanner;
 
+public class RoseIndia {
 	static class Node {
 		Node left;
 		Node right;
-		int value;
+		int score;
+		String employeeID;
+		String employeeName;
+		String managerID;
 
-		public Node(int value) {
-			this.value = value;
+		public Node(String employeeID, String employeeName, String managerID, int score) {
+			this.score = score;
+			this.employeeID = employeeID;
+			this.employeeName = employeeName;
+			this.managerID = managerID;
 		}
 	}
 
-	public void run() {
-		Node rootnode = new Node(25);
-		System.out.println("Building tree with rootvalue " + rootnode.value);
-		System.out.println("=================================");
-		insert(rootnode, 11);
-		insert(rootnode, 15);
-		insert(rootnode, 16);
-		insert(rootnode, 23);
-		insert(rootnode, 79);
-		System.out.println("Traversing tree in order");
-		System.out.println("=================================");
-		printInOrder(rootnode);
+	public static void main(String[] args) {
+		System.out.println("Enter the number of lines");
+		Scanner input = new Scanner(System.in);
+		String numberOfElementsString = input.nextLine();
+		int numberOfElements = Integer.parseInt(numberOfElementsString);
+		String[] stringInput = new String[numberOfElements];
+		for (int i = 0; i < numberOfElements; i++) {
+			System.out.print("Input Element" + (i + 1) + ": \n");
+			stringInput[i] = input.nextLine();
+		}
+		input.close();
+		int totalBonus = Integer.parseInt(stringInput[0]);
+		
+		new RoseIndia().run(stringInput, numberOfElements);
 	}
 
-	public void insert(Node node, int value) {
-		if (value < node.value) {
-			if (node.left != null) {
-				insert(node.left, value);
+	public void run(String[] stringInput, int numberOfElements) {
+		Node rootnode = null;
+		for (int i = 1; i < numberOfElements; i++) {
+			String temp[] = stringInput[i].split(",");
+			int score = Integer.parseInt(temp[3]);
+			if (temp[2].equals("-1")) {
+				rootnode = new Node(temp[0], temp[1], temp[2], score);
 			} else {
-				System.out.println("  Inserted " + value + " to left of node " + node.value);
-				node.left = new Node(value);
-			}
-		} else if (value > node.value) {
-			if (node.right != null) {
-				insert(node.right, value);
-			} else {
-				System.out.println("  Inserted " + value + "   to right of node " + node.value);
-				node.right = new Node(value);
+				insert(rootnode, temp[0], temp[1], temp[2], score);
 			}
 		}
 	}
 
-	public void printInOrder(Node node) {
-		if (node != null) {
-			printInOrder(node.left);
-			System.out.println("  Traversed " + node.value);
-			printInOrder(node.right);
+	public void insert(Node node, String employeeID, String employeeName, String managerID, int score) {
+		if (managerID == node.employeeID) {
+			if (node.left == null) {
+				node.left = new Node(employeeID, employeeName, managerID, score);
+				System.out.println("left inserted");
+			} else if (node.right == null) {
+				node.right = new Node(employeeID, employeeName, managerID, score);
+				System.out.println("Right inserted");
+			}
 		}
 	}
 }
